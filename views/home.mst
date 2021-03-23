@@ -8,7 +8,7 @@
 </head>
 <body>
     
-<p>Seja bem vindo {{nome}}</p>
+{{> header}}
 
 <p>Mostre abaixo[↓] sua idade caso voce esteja empregado</p>
 {{#empregado}}

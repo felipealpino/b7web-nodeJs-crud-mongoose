@@ -2,8 +2,12 @@ const express = require('express')
 
 //Rotas 
 const router = express.Router();
+
+    
+
 router.get('/', (req,res) => { 
-    res.render('home', {
+    
+    const obj = {
         'nome':'Felipe',
         'idade':25, 
         'sobrenome':'Gontijo', 
@@ -22,9 +26,11 @@ router.get('/', (req,res) => {
                 nome:'Caneta', 
                 quant:5, 
             }, 
-        ]
+        ],
+        'interesses': ['node', 'js', 'laravel', 'php']
+    }
 
-    }); //segundo parametro seria os dados para enviar para /views/home
+    res.render('home', obj); //segundo parametro seria os dados para enviar para /views/home
 })
 
 module.exports = router;  
