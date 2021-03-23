@@ -13,3 +13,15 @@
 </head>
 <body>
 <h1>HEADER</h1>    
+
+<hr>
+
+<ul>
+    {{#helpers.menu}}
+        <li>
+            <a href={{slug}}>{{name}}</a>
+        </li>
+    {{/helpers.menu}}
+</ul>
+
+<hr>

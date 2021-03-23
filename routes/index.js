@@ -1,16 +1,12 @@
 const express = require('express')
+const homeController = require('../controllers/homeController')
+const userController = require('../controllers/userController')
 
 //Rotas 
-const router = express.Router();
+const router = express.Router(); 
 
-router.get('/', (req,res) => { 
-    
-    const obj = {
-        nome:'Felipe',
-        pageTitle: 'Titulo preenchido',  
-    }
-
-    res.render('home', obj); //segundo parametro seria os dados para enviar para /views/home
-})
-
-module.exports = router;   
+router.get('/', homeController.index)
+router.get('/users/signin', userController.signin)
+router.get('/users/signup', userController.signup)
+  
+module.exports = router;        
