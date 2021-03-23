@@ -3,7 +3,16 @@ const express = require('express')
 //Rotas 
 const router = express.Router();
 router.get('/', (req,res) => {
-    res.send('Hello World! Está na pagina raiz')
+    // /?nome=Felipe&idade=25
+    let nome = req.query.nome
+    let idade = req.query.idade
+
+    res.json(req.query)
+})
+
+router.get('/posts/:id', (req,res) => {
+    let id = req.params.id
+    res.send('Id do post'+ id) 
 })
 
 router.get('/sobre', (req, res) => {
