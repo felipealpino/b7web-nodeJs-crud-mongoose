@@ -1,5 +1,15 @@
-<header>
+<html>
+<html>
+<head>
+    
+    {{#pageTitle}}
+        <title>{{pageTitle}}</title>
+    {{/pageTitle}}
 
-    <h1>HEADER</h1>
+    {{^pageTitle}}
+        <title>{{helpers.defaultPageTitle}}</title>
+    {{/pageTitle}}
 
-</header>
+</head>
+<body>
+<h1>HEADER</h1>    

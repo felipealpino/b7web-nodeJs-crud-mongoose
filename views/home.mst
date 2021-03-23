@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    
 {{> header}}
-
-<p>Mostre abaixo[↓] sua idade caso voce esteja empregado</p>
-{{#empregado}}
-<p>Idade: {{idade}}</p>
-{{/empregado}}
-
-<p>Testando LOOP nos materiais[↓]</p>
-<ul>
-    {{#materiais}}
-        <li>Nome: {{nome}} - {{quant}}un</li>
-    {{/materiais}}
-</ul>
-
+<h3>Bem vindo, {{nome}}</h3>
+<p>testando : {{teste}} -- está vindo la do app.js</p>
 </body>
 </html>
