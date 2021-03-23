@@ -1,21 +1,6 @@
 instalações de dependencias
 
-npm install express --save
-npm install nodemon --save-dev
-
-package.json
-{
-  "name": "nodejs",
-  "version": "1.0.0",
-  "scripts": {
-    "start":"nodemon ./server.js"
-  },
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  }
-}
-
+→ npm install express --save
+→ npm install nodemon --save-dev
+→ npm install dotenv
 
