@@ -1,10 +1,11 @@
 instalações de dependencias
+Express - Node.js web application framework
 
 → npm install express --save
 → npm install nodemon --save-dev
 → npm install dotenv
 → npm install mongoose --save
-
+→ npm install mustache-express --save
 
 req - informações da requisição, cabeçalhos, parametros enviados, arquivos
     GET - 
@@ -20,3 +21,4 @@ req - informações da requisição, cabeçalhos, parametros enviados, arquivos
 
 res -   res.json(req.query)
         res.send('enviando alguma resposta')
+
