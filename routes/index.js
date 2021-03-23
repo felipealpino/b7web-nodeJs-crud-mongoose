@@ -7,8 +7,24 @@ router.get('/', (req,res) => {
         'nome':'Felipe',
         'idade':25, 
         'sobrenome':'Gontijo', 
-        'profissao':'estudante'
+        'profissao':'estudante',
+        'empregado': true,
+        'materiais': [
+            {
+                nome:'Lapis',
+                quant:2,
+            }, 
+            {
+                nome:'Borracha',
+                quant:1,
+            },
+            {
+                nome:'Caneta', 
+                quant:5, 
+            }, 
+        ]
+
     }); //segundo parametro seria os dados para enviar para /views/home
 })
 
-module.exports = router;
+module.exports = router;  
