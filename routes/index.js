@@ -5,8 +5,8 @@ const userController = require('../controllers/userController')
 //Rotas 
 const router = express.Router(); 
 
-router.get('/', homeController.index)
+router.get('/', homeController.userMiddleware, homeController.index)
 router.get('/users/signin', userController.signin)
 router.get('/users/signup', userController.signup)
-  
-module.exports = router;        
+
+module.exports = router;

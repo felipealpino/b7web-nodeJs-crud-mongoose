@@ -10,11 +10,10 @@ app.use((req,res,next)=> { //tem que ser antes da definição das rotas
     res.locals.teste = 'testando123testando';
     next();
 })
+app.use(express.json()) //body-parser (old library)
 
 app.use('/', router)
   
-app.use(express.json()) //body-parser (old library)
-
 app.engine('mst', mustache(__dirname+'/views/partials', '.mst')) // extensão do arquivo, rodar a varaivel como função
 app.set('view engine', 'mst');
 app.set('views', __dirname+'/views') // __dirname = diretório absoluto
