@@ -12,5 +12,7 @@ router.get('/users/signup', userController.signup)
 router.get('/post/add', postController.add)
 router.post('/post/add', postController.addAction)
 
+router.get('/post/:slug/edit', postController.edit)
+router.post('/post/:slug/edit', postController.editAction)
 
-module.exports = router; 
+module.exports = router;  

@@ -11,7 +11,7 @@ exports.addAction =  async (req, res) => {
     slugMade = req.body.title.split(' ').join('-').toLowerCase();
     console.log(slugMade)
     const post = new Post({
-        title:req.body.title, 
+        title:req.body.title,      
         body:req.body.body,
         slug:slugMade
     })
@@ -24,11 +24,30 @@ exports.addAction =  async (req, res) => {
         return false;  //mata a execução da função
     }
 
-
     // req.flash([type], msg)
     req.flash('success', 'You post was saved ! =) ')
+    res.redirect('/'); 
+}
 
-    res.redirect('/');
+exports.edit = async (req, res) =>{
+    const dados = await Post.findOne({
+        slug: req.params.slug
+    })
+    res.render('postEdit', dados)
+}
 
+exports.editAction = async (req, res) =>{
+
+    const post = await Post.findOneAndUpdate(
+        {slug:req.params.slug},
+        req.body,
+        {
+            new:true, // feita essa alteração, retorna o novo post
+            runValidators:true, //valida de acordo com o schema setado
+        }, 
+    );
+
+    req.flash('success', 'Post updated =D')
+    res.redirect('/')
 
 }

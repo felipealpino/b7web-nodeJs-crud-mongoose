@@ -3,9 +3,9 @@ mongoose.Promise = global.Promise; //pode user ES6 - await, Promises
 const slug = require('slug')
 
 /**Um Post tem:
- * Titulo
+ * Titulo 
  * Corpo
- * Tags
+ * Tags 
  * Slug
  */
 
