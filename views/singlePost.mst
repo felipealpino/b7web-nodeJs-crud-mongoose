@@ -1,0 +1,6 @@
+{{> header}}
+
+<p>Slug: {{slug}}</p>
+<h3> Titulo: {{title}}</h3>
+<p> Corpo: {{body}} </p>
+<p> tags: {{tags}} </p>

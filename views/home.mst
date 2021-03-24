@@ -9,6 +9,7 @@
     <p>{{body}}</p>
 
     <a href="/post/{{slug}}/edit">[editar]</a>
+    <a href="/post/{{slug}}/delete">[deletar]</a>
 
     <hr>
 {{/posts}}

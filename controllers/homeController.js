@@ -9,10 +9,10 @@ exports.userMiddleware = (req, res, next) =>{
     req.userInfo = info; 
     next();
 }
- 
+  
  
 exports.index = async (req,res) => { 
-    const posts = await Post.find(); //retorna todos os dados
+    const posts = await Post.find(); //retorna todos os dados 
     const dados = { 
         pageTitle: 'Titulo preenchido',  
         userInfo:req.userInfo,
