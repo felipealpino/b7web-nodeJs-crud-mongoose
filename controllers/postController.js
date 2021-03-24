@@ -37,7 +37,7 @@ exports.edit = async (req, res) =>{
 }
 
 exports.editAction = async (req, res) =>{
-
+    req.body.slug = req.body.title.split(' ').join('-').toLowerCase();
     const post = await Post.findOneAndUpdate(
         {slug:req.params.slug},
         req.body,
