@@ -13,6 +13,7 @@ app.use((req,res,next)=> { //tem que ser antes da definição das rotas
     next();
 })
 app.use(express.json()) //body-parser (old library)
+app.use(express.urlencoded({extended:true}))
 
 app.use('/', router) 
 

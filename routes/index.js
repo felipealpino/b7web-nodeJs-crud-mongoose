@@ -3,7 +3,7 @@ const homeController = require('../controllers/homeController')
 const userController = require('../controllers/userController')
 const postController = require('../controllers/postController')
 
-//Rotas 
+//Rotas  
 const router = express.Router(); 
 
 router.get('/', homeController.userMiddleware, homeController.index)
