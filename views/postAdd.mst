@@ -15,8 +15,8 @@
     </label> <br>
 
     <label for="">  
-        Tags:
-        
+        Tags: <small>Separar as tags por virgula: </small>
+        <input type="text" name="tags" id="">
     </label> <br>
 
     <label for="">

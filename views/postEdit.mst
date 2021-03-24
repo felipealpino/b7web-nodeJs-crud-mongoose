@@ -16,7 +16,7 @@
 
     <label for="">  
         Tags:
-        
+        <input type="text" name="tags" id="" value="{{tags}}">
     </label> <br>
 
     <label for="">

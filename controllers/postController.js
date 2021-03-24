@@ -9,12 +9,10 @@ exports.add = (req, res) => {
 exports.addAction =  async (req, res) => {
     //req.body → requisição post usamos 'body' ao invés de 'query'
     slugMade = req.body.title.split(' ').join('-').toLowerCase();
-    console.log(slugMade)
-    const post = new Post({
-        title:req.body.title,      
-        body:req.body.body,
-        slug:slugMade
-    })
+    arrTags = req.body.tags.split(',').map((tag) => tag.trim())
+    req.body.slug = slugMade
+    req.body.tags = arrTags
+    const post = new Post(req.body)
     
     try{
         await post.save();
@@ -33,6 +31,7 @@ exports.edit = async (req, res) =>{
     const dados = await Post.findOne({
         slug: req.params.slug
     })
+    dados.tags = dados.tags.join(',')
     res.render('postEdit', dados)
 }
 
