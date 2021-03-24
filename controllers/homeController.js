@@ -7,6 +7,7 @@ exports.userMiddleware = (req, res, next) =>{
     next();
 }
 
+
 exports.index = (req,res) => { 
     const obj = {
         pageTitle: 'Titulo preenchido',  
