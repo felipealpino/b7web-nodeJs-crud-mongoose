@@ -37,17 +37,23 @@ exports.edit = async (req, res) =>{
 }
 
 exports.editAction = async (req, res) =>{
-    req.body.slug = req.body.title.split(' ').join('-').toLowerCase();
-    const post = await Post.findOneAndUpdate(
-        {slug:req.params.slug},
-        req.body,
-        {
-            new:true, // feita essa alteração, retorna o novo post
-            runValidators:true, //valida de acordo com o schema setado
-        }, 
-    );
+    
+    try{
+        req.body.slug = req.body.title.split(' ').join('-').toLowerCase();
+        const post = await Post.findOneAndUpdate(
+            {slug:req.params.slug},
+            req.body,
+            {
+                new:true, // feita essa alteração, retorna o novo post
+                runValidators:true, //valida de acordo com o schema setado
+            }, 
+        );
 
-    req.flash('success', 'Post updated =D')
-    res.redirect('/')
+        req.flash('success', 'Post updated =D')
+        res.redirect('/')
+    } catch(error){
+        req.flash('error', 'Error: '+error.message)
+        res.redirect('/post/'+req.params.slug+'/edit')
+    }
 
 }
