@@ -8,7 +8,7 @@ mongoose.Promise = global.Promise //pode user ES6 - await, Promises
 mongoose.connection.on('error', (error) => {
     console.error("Erro: "+error.message);
 });
- 
+  
 // Carregando todos os models
 require('./models/Post');
 const app = require('./app');

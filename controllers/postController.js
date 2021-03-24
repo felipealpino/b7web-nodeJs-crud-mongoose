@@ -10,6 +10,10 @@ exports.addAction =  async (req, res) => {
     //req.body → requisição post usamos 'body' ao invés de 'query'
     const post = new Post(req.body)
     await post.save();
+
+
+    req.flash('success', 'You post was saved ! =) ')
+
     res.redirect('/');
 
 

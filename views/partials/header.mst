@@ -25,3 +25,17 @@
 </ul>
 
 <hr>
+
+{{#flashes}}
+    {{#success}}
+        <div>{{.}}</div>
+    {{/success}}
+    
+    {{#erro}}
+        <div>{{.}}</div>
+    {{/erro}}
+
+    {{#info}}
+        <div>{{.}}</div>
+    {{/info}}
+{{/flashes}}
