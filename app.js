@@ -2,6 +2,8 @@ const express = require('express')
 const mustache = require('mustache-express')
 const router = require('./routes/index')
 const helpers = require('./helpers')
+const errorHandler = require('./handlers/errorHandlers')
+
 
 //Configurações 
 const app = express();
@@ -12,7 +14,10 @@ app.use((req,res,next)=> { //tem que ser antes da definição das rotas
 })
 app.use(express.json()) //body-parser (old library)
 
-app.use('/', router)
+app.use('/', router) 
+
+app.use(errorHandler.notFound)
+  
   
 app.engine('mst', mustache(__dirname+'/views/partials', '.mst')) // extensão do arquivo, rodar a varaivel como função
 app.set('view engine', 'mst');
