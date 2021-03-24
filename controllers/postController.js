@@ -8,7 +8,13 @@ exports.add = (req, res) => {
  
 exports.addAction =  async (req, res) => {
     //req.body → requisição post usamos 'body' ao invés de 'query'
-    const post = new Post(req.body)
+    slugMade = req.body.title.split(' ').join('-').toLowerCase();
+    console.log(slugMade)
+    const post = new Post({
+        title:req.body.title, 
+        body:req.body.body,
+        slug:slugMade
+    })
     
     try{
         await post.save();

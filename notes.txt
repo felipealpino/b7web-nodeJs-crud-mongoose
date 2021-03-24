@@ -7,7 +7,7 @@ Express - Node.js web application framework
 → npm install mongoose --save
 → npm install mustache-express --save
 → npm install cookie-parser express-session express-flash --save
-
+→ npm install slug --save
 
 req - informações da requisição, cabeçalhos, parametros enviados, arquivos
     GET - 

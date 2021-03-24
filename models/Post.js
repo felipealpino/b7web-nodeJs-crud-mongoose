@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise; //pode user ES6 - await, Promises
+const slug = require('slug')
 
 /**Um Post tem:
  * Titulo
@@ -25,6 +26,12 @@ const postSchema = new mongoose.Schema({
     },
     tags:[String]
 });
+
+
+//Antes de salvar, execute a função
+// postSchema.pre('save', function(next){
+
+// })
 
 // criando o banco
 module.exports = mongoose.model('Post', postSchema)
