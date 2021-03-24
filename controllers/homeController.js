@@ -1,7 +1,7 @@
 exports.userMiddleware = (req, res, next) =>{
     let info = {
         id: 123,
-        name: 'Felipe',
+        name: 'Felipe (estou no homeController)',
     }
     req.userInfo = info; 
     next();

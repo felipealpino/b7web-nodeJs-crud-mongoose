@@ -9,9 +9,17 @@ exports.add = (req, res) => {
 exports.addAction =  async (req, res) => {
     //req.body → requisição post usamos 'body' ao invés de 'query'
     const post = new Post(req.body)
-    await post.save();
+    
+    try{
+        await post.save();
+    } catch(error) {
+        req.flash('error', 'Erro: '+ error.message) 
+        res.redirect('/post/add') 
+        return false;  //mata a execução da função
+    }
 
 
+    // req.flash([type], msg)
     req.flash('success', 'You post was saved ! =) ')
 
     res.redirect('/');

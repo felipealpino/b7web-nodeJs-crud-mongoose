@@ -21,6 +21,7 @@ const postSchema = new mongoose.Schema({
     body:{
         type:String,
         trim:true,
+        required:true,
     },
     tags:[String]
 });

@@ -31,9 +31,9 @@
         <div>{{.}}</div>
     {{/success}}
     
-    {{#erro}}
+    {{#error}}
         <div>{{.}}</div>
-    {{/erro}}
+    {{/error}}
 
     {{#info}}
         <div>{{.}}</div>
