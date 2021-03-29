@@ -10,21 +10,26 @@
         <title>{{helpers.defaultPageTitle}}</title>
     {{/pageTitle}}
 
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+
 </head>
 <body>
-<h1>HEADER</h1>    
+<div class="header">
+    <h1>HEADER</h1>    
 
-<hr>
+    <hr>
 
-<ul>
-    {{#helpers.menu}}
-        <li>
-            <a href={{slug}}>{{name}}</a>
-        </li>
-    {{/helpers.menu}}
-</ul>
+    <ul>
+        {{#helpers.menu}}
+            <li>
+                <a href={{slug}}>{{name}}</a>
+            </li>
+        {{/helpers.menu}}
+    </ul>
 
-<hr>
+    <hr>
+
 
 {{#flashes}}
     {{#success}}

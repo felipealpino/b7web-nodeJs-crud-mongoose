@@ -1,25 +1,26 @@
-{{> header}}
+    {{> header}}
+</div>
 
-<h2>Editar Post</h2>
+    <h2>Editar Post</h2>
 
-<form method="POST">
+    <form method="POST">
 
-    <label for=""> 
-        Titulo: 
-        <input type="text" name="title" id="" value="{{title}}">
-    </label> <br>
+        <label for=""> 
+            Titulo: 
+            <input type="text" name="title" id="" value="{{title}}">
+        </label> <br>
 
-    <label for="">
-        Corpo:
-        <textarea name="body" id="" cols="25" rows="4">{{body}}</textarea>
-    </label> <br>
+        <label for="">
+            Corpo:
+            <textarea name="body" id="" cols="25" rows="4">{{body}}</textarea>
+        </label> <br>
 
-    <label for="">  
-        Tags:
-        <input type="text" name="tags" id="" value="{{tags}}">
-    </label> <br>
+        <label for="">  
+            Tags:
+            <input type="text" name="tags" id="" value="{{tags}}">
+        </label> <br>
 
-    <label for="">
-        <input type="submit" value="Editar">
-    </label>
-</form>
+        <label for="">
+            <input type="submit" value="Editar">
+        </label>
+    </form>

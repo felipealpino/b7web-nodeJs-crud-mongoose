@@ -1,18 +1,24 @@
-{{> header}}
-<h3>Bem vindo, {{userInfo.name}}</h3>
-<p>testando : {{teste}} -- está vindo la do app.js</p>
-<hr>
-{{#posts}}
-    <h3>
-        <a href="/post/{{slug}}">{{title}}</a>
-    </h3>
-    <p>{{body}}</p>
+    {{> header}}
+    <h3>Bem vindo, {{userInfo.name}}</h3>
+    <p>testando : {{teste}} -- está vindo la do app.js</p>
+    <hr> 
+</div> <!-- FECHANDO DIV VINDA DO HEADER -->
 
-    <a href="/post/{{slug}}/edit">[editar]</a>
-    <a href="/post/{{slug}}/delete">[deletar]</a>
 
-    <hr>
-{{/posts}}
+<div class="container-main">
+    {{#posts}}
+        <div class="container-main-posts">
+            <h3>
+                <a href="/post/{{slug}}">{{title}}</a>
+            </h3>
+            <p>{{body}}</p>
+            <div class="container-main-posts-links">
+                <a href="/post/{{slug}}/edit">[editar]</a>
+                <a href="/post/{{slug}}/delete">[deletar]</a>
+            </div>
+        </div>
+    {{/posts}}
+</div>
 
 </body>
 </html>

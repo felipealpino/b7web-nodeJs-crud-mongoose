@@ -12,6 +12,8 @@ const app = express();
 app.use(express.json()) //body-parser (old library)
 app.use(express.urlencoded({extended:true}))
 
+app.use(express.static(__dirname+'/public'))
+
 app.use(cookieParser(process.env.SECRET)); //habilitando cookie
 app.use(session({
     secret:process.env.SECRET,

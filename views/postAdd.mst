@@ -1,4 +1,5 @@
-{{> header}}
+    {{> header}}
+</div>
 
 <h2>Adicionar Post</h2>
 
