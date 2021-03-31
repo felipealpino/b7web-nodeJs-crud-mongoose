@@ -8,9 +8,8 @@ exports.add = (req, res) => {
  
 exports.addAction =  async (req, res) => {
     //req.body → requisição post usamos 'body' ao invés de 'query'
-    slugMade = req.body.title.split(' ').join('-').toLowerCase();
+    req.body.slug = req.body.title.split(' ').join('-').toLowerCase();
     req.body.tags = req.body.tags.split(',').map((tag) => tag.trim())
-    req.body.slug = slugMade
     const post = new Post(req.body)
     
     try{

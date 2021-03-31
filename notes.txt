@@ -8,19 +8,7 @@ Express - Node.js web application framework
 → npm install mustache-express --save
 → npm install cookie-parser express-session express-flash --save
 → npm install slug --save
-
-req - informações da requisição, cabeçalhos, parametros enviados, arquivos
-    GET - 
-        http://localhost:7777/?nome=Felipe&idade=25
-        req.query.nome 
-        req.query.idade
-    POST - 
-        router.get('/posts/:id', (req,res) 
-        req.params.id
-        req.body 
-
-
-
-res -   res.json(req.query)
-        res.send('enviando alguma resposta')
+→ npm install multer --save
+→ npm install jimp --save
+→ npm install uuid --save
 

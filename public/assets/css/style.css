@@ -123,6 +123,9 @@ input[type="submit"]:hover {
 .container-main-posts-links a:hover {
   text-decoration: underline;
 }
+.container-main-posts img {
+  max-width: 100%;
+}
 
 
 .container-main-login{

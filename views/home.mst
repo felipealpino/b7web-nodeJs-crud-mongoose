@@ -8,6 +8,9 @@
 <div class="container-main">
     {{#posts}}
         <div class="container-main-posts">
+            {{#photo}}
+                <img src="/media/{{photo}}">
+            {{/photo}}
             <h3>
                 <a href="/post/{{slug}}">{{title}}</a>
             </h3>

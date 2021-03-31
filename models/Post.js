@@ -11,6 +11,7 @@ const slug = require('slug')
 
 // fazendo o schema da tabela
 const postSchema = new mongoose.Schema({
+    photo:String,
     title:{
         type: String,
         trim: true,
