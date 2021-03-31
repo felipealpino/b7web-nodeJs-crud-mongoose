@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const Post = mongoose.model('Post')
+const uuid = require('uuid')
 
 
 exports.add = (req, res) => {
@@ -8,9 +9,20 @@ exports.add = (req, res) => {
  
 exports.addAction =  async (req, res) => {
     //req.body → requisição post usamos 'body' ao invés de 'query'
-    req.body.slug = req.body.title.split(' ').join('-').toLowerCase();
+
+    req.body.slug = req.body.title.trim().split(' ').join('-').toLowerCase();
+    
+    const postExists = await Post.findOne({
+        slug: req.body.slug
+    })
+    
+    if(postExists){
+        req.body.slug = req.body.slug + '-' + uuid.v1()
+    }
+
     req.body.tags = req.body.tags.split(',').map((tag) => tag.trim())
     const post = new Post(req.body)
+
     
     try{
         await post.save();
@@ -34,9 +46,15 @@ exports.edit = async (req, res) =>{
 }
 
 exports.editAction = async (req, res) =>{
-    
     try{
-        req.body.slug = req.body.title.split(' ').join('-').toLowerCase();
+        req.body.slug = req.body.title.trim().split(' ').join('-').toLowerCase();
+        const postExists = await Post.findOne({
+            slug: req.body.slug
+        })
+        if(postExists){
+            req.body.slug = req.body.slug + '-' + uuid.v1()
+        }
+        
         req.body.tags = req.body.tags.split(',').map((tag) => tag.trim())
         const post = await Post.findOneAndUpdate(
             {slug:req.params.slug},
