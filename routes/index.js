@@ -18,7 +18,10 @@ router.post('/post/add',
 )
 
 router.get('/post/:slug/edit', postController.edit)
-router.post('/post/:slug/edit',postController.editAction
+router.post('/post/:slug/edit',
+    imageMiddleware.upload,
+    imageMiddleware.resize,
+    postController.editAction
 )
 
 router.get('/post/:slug/delete', postController.deleteAction)

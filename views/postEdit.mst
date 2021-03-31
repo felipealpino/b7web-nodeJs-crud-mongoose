@@ -3,7 +3,14 @@
 
     <h2>Editar Post</h2>
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
+        <label for="">
+            Imagem:
+            <input type="file" name="photo">
+            {{#photo}}
+                <img src="/media/{{photo}}" style="width: 200px;" >
+            {{/photo}}
+        </label> <br>
 
         <label for=""> 
             Titulo: 
