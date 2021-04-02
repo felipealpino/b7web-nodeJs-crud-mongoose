@@ -140,3 +140,15 @@ input[type="submit"]:hover {
   border-radius: 5px;
   box-shadow: 0 6px 16px 0 rgb(0 0 0 / 20%);
 }
+
+.container-search-tag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container-search-span{
+  margin-right: 10px;
+}
+.container-serach-input input {
+  margin-top:0;
+}

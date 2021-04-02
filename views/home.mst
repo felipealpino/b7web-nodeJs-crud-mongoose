@@ -4,6 +4,17 @@
     <hr> 
 </div> <!-- FECHANDO DIV VINDA DO HEADER -->
 
+<div class="container-search-tag">
+    
+    <div class="container-search-span">
+        <span>Search a tag: </span>
+    </div>
+
+    <div class="container-serach-input">
+        <input type="text" name="tag" id="">
+    </div>
+
+</div>
 
 <div class="container-main">
     {{#posts}}
