@@ -11,6 +11,7 @@ router.get('/', homeController.userMiddleware, homeController.index)
 router.post('/',homeController.buscaTags)
 router.get('/users/signin', userController.signin) 
 router.get('/users/signup', userController.signup)
+router.post('/users/signup', userController.signupAction)
 router.get('/post/add', postController.add)
 router.post('/post/add',
     imageMiddleware.upload,

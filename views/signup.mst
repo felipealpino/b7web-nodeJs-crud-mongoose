@@ -3,16 +3,23 @@
 
 <div class="container-main-login">
     <p>Bem vindo a página de cadastro</p>
-    <div class="container-main-login-form">
-        <div class="container-main-login-input">
-            <label for="email">Email</label> <br>
-            <input type="email" name="email" id="email"> <br><br>
+    <form action="" method="post">
+        <div class="container-main-login-form">
+            <div class="container-main-login-input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"> <br>
 
-            <label for="password">Password</label> <br>
-            <input type="password" name="password" id="password"> <br><br>
+                <label for="nome">Nome</label>
+                <input type="text" name="name" id="nome"> <br>
 
-            <label for="confirmPassword">Confirm password</label> <br>
-            <input type="password" name="confirmPassword" id="confirmPassword"> <br><br>
+                <label for="nome">Senha</label>
+                <input type="password" name="password" id="password"> <br>
+
+                <label for="nome">Confirmar senha</label>
+                <input type="password" name="password2" id="password"> <br>
+
+                <input type="submit" value="Cadastrar">
+            </div>
         </div>
-    </div>
+    </form>
 </div>

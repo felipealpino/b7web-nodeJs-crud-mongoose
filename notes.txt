@@ -13,3 +13,5 @@ Express - Node.js web application framework
 → npm install uuid --save
 
 → npm install passport passport-local passport-local-mongoose --save
+
+→ npm install bcrypt

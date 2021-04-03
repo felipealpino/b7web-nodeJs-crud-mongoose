@@ -3,15 +3,19 @@
 
 <div class="container-main-login">
 <p>Bem vindo a página de login</p>
-    <div class="container-main-login-form">
-        <div class="container-main-login-input">
-            <label for="email">Email</label> <br>
-            <input type="email" name="email" id="email"> <br><br>
-        </div>
+    <form action="" method="post">
+        <div class="container-main-login-form">
+            <div class="container-main-login-input">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email"> <br>
+            </div>
 
-        <div class="container-main-login-input">
-            <label for="password">Password</label> <br>
-            <input type="password" name="password" id="password"> <br><br>
+            <div class="container-main-login-input">
+                <label for="password">Password</label> 
+                <input type="password" name="password" id="password"> <br>
+            </div>
+
+            <input type="submit" value="Fazer login"> <br>
         </div>
-    </div>
+    </form>
 </div>
