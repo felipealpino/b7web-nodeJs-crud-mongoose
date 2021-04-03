@@ -149,6 +149,18 @@ input[type="submit"]:hover {
 .container-search-span{
   margin-right: 10px;
 }
-.container-serach-input input {
+.container-search-input input {
   margin-top:0;
+  border-radius: 5px;
+}
+.container-search-tag input[type=submit]{
+  max-width: 100px;
+  margin: 0px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container-search-tag input[type=submit]:hover{
+  background-color: #ccc;
 }

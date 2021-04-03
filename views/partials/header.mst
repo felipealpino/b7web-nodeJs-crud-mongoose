@@ -1,7 +1,6 @@
 <html>
-<html>
 <head>
-    
+
     {{#pageTitle}}
         <title>{{pageTitle}}</title>
     {{/pageTitle}}

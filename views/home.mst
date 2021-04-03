@@ -4,17 +4,19 @@
     <hr> 
 </div> <!-- FECHANDO DIV VINDA DO HEADER -->
 
-<div class="container-search-tag">
-    
-    <div class="container-search-span">
-        <span>Search a tag: </span>
-    </div>
+<form action="" method="POST">
+    <div class="container-search-tag">
+        <div class="container-search-span">
+            <span>Search a tag: </span>
+        </div>
 
-    <div class="container-serach-input">
-        <input type="text" name="tag" id="">
-    </div>
+        <div class="container-search-input">
+            <input type="text" name="tags" id="">
+        </div>
 
-</div>
+        <input type="submit" value="Search">
+    </div>
+</form>
 
 <div class="container-main">
     {{#posts}}
@@ -30,9 +32,11 @@
                 <a href="/post/{{slug}}/edit">[editar]</a>
                 <a href="/post/{{slug}}/delete">[deletar]</a>
             </div>
+            <p>{{tags}}</p>
         </div>
     {{/posts}}
 </div>
 
+<script src="/assets/js/script.js"></script>
 </body>
 </html>

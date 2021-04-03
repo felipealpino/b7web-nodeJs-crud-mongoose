@@ -31,9 +31,7 @@ app.use((req,res,next)=> { //tem que ser antes da definição das rotas
 })
 
 
-
 app.use('/', router) 
-
 app.use(errorHandler.notFound)
   
   

@@ -8,6 +8,7 @@ const imageMiddleware = require('../middlewares/imageMiddleware')
 const router = express.Router();  
  
 router.get('/', homeController.userMiddleware, homeController.index)
+router.post('/',homeController.buscaTags)
 router.get('/users/signin', userController.signin) 
 router.get('/users/signup', userController.signup)
 router.get('/post/add', postController.add)
