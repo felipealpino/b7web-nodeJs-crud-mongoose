@@ -17,8 +17,14 @@ exports.index = async (req,res) => {
         userInfo:req.userInfo,
         posts: posts, 
     }
-
-    res.render('home', dados); //segundo parametro seria os dados para enviar para /views/home
+    if(!req.user){
+        req.user = {}
+    } 
+    const {email, name, password} = req.user
+    res.render('home', {
+        dados:dados,
+        name:name
+    }); //segundo parametro seria os dados para enviar para /views/home
 }
 
 exports.buscaTags = async (req, res) => {

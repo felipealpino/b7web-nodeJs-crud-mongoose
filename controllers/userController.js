@@ -15,8 +15,8 @@ exports.signinAction = (req, res) => {
         bcrypt.compare(password, dados.password, (error, resposta) => {
             // resposta == true ou resposta == false
             if(resposta){
-                req.flash('success', 'PODE PASSAR MIGAO')
-                res.render('home', {dados})
+                req.login(dados, () => {} )
+                res.redirect('/')
             } else {
                 req.flash('error', 'Errou a senha Jão ( ͡❛  ͟ʖ ͡❛)')
                 res.redirect('signin')
