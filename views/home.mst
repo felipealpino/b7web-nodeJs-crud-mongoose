@@ -1,6 +1,10 @@
     {{> header}}
-    <h3>Bem vindo, {{name}}</h3>
-    <hr> 
+    {{#user}}
+        <div class="header-welcome">
+            <h3>Bem vindo, {{user.name}} </h3>
+            <a href="/users/logout">Sair</a> 
+        </div>
+    {{/user}}
 </div> <!-- FECHANDO DIV VINDA DO HEADER -->
 
 <form action="" method="POST">

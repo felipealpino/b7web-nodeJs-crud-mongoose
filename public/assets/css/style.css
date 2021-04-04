@@ -164,3 +164,16 @@ input[type="submit"]:hover {
 .container-search-tag input[type=submit]:hover{
   background-color: #ccc;
 }
+
+.header-welcome{
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+}
+.header-welcome h3{
+  margin: 0;
+  margin-right: 20px;
+}
+.header-welcome a{
+  text-decoration: underline;
+}

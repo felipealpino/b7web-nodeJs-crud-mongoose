@@ -7,12 +7,13 @@ const imageMiddleware = require('../middlewares/imageMiddleware')
 //Rotas   
 const router = express.Router();  
  
-router.get('/', homeController.userMiddleware, homeController.index)
-router.post('/',homeController.buscaTags)
+router.get('/', homeController.index)
+router.post('/', homeController.buscaTags)
 router.get('/users/signin', userController.signin) 
 router.post('/users/signin', userController.signinAction) 
 router.get('/users/signup', userController.signup)
 router.post('/users/signup', userController.signupAction)
+router.get('/users/logout', userController.logoutAction)
 router.get('/post/add', postController.add)
 router.post('/post/add',
     imageMiddleware.upload,

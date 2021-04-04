@@ -54,3 +54,8 @@ exports.signupAction = async (req, res) => {
     req.flash('success', 'User successfully created! Go '+name+' (ง ͡❛ ͜ʖ ͡❛)ง')
     res.redirect('signin')
 }
+
+exports.logoutAction = (req, res) => {
+    req.logout()
+    res.redirect('/')
+}

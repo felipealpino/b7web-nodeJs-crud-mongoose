@@ -24,17 +24,16 @@ app.use(session({
 }))
 app.use(flash()); 
 
-//Configurações 
-app.use((req,res,next)=> { //tem que ser antes da definição das rotas 
-    res.locals.helpers = helpers;       //pega infos do arquivo helpers.js
-    res.locals.flashes = req.flash();   //pega todas as mensagens e salva em flashes
-    res.locals.teste = 'testando123testando';
-    next();
-})
-
-
 app.use(passport.initialize());
 app.use(passport.session());
+
+//Configurações 
+app.use((req, res, next) => { //tem que ser antes da definição das rotas 
+    res.locals.helpers = helpers;       //pega infos do arquivo helpers.js
+    res.locals.flashes = req.flash();   //pega todas as mensagens e salva em flashes
+    res.locals.user = req.user
+    next();
+})
 
 const User = require('./models/User')
 passport.use(new LocalStrategy(User.authenticate()))
