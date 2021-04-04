@@ -32,10 +32,12 @@
                 <a href="/post/{{slug}}">{{title}}</a>
             </h3>
             <p>{{body}}</p>
+            {{#user}}
             <div class="container-main-posts-links">
                 <a href="/post/{{slug}}/edit">[editar]</a>
                 <a href="/post/{{slug}}/delete">[deletar]</a>
             </div>
+            {{/user}}
             <p>{{tags}}</p>
         </div>
     {{/posts}}

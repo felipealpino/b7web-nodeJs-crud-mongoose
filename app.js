@@ -29,9 +29,16 @@ app.use(passport.session());
 
 //Configurações 
 app.use((req, res, next) => { //tem que ser antes da definição das rotas 
-    res.locals.helpers = helpers;       //pega infos do arquivo helpers.js
+    res.locals.helpers = {...helpers};       //pega infos do arquivo helpers.js
     res.locals.flashes = req.flash();   //pega todas as mensagens e salva em flashes
     res.locals.user = req.user
+
+    if(req.user){ //ou req.isAuthenticated  
+        res.locals.helpers.menu = res.locals.helpers.menu.filter( i => (i.logged))
+    } else {
+        res.locals.helpers.menu = res.locals.helpers.menu.filter( i => (i.guest))
+    }
+
     next();
 })
 
