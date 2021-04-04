@@ -1,5 +1,5 @@
     {{> header}}
-    <h3>Bem vindo, {{userInfo.name}}</h3>
+    <h3>Bem vindo, {{dados.name}}</h3>
     <p>testando : {{teste}} -- está vindo la do app.js</p>
     <hr> 
 </div> <!-- FECHANDO DIV VINDA DO HEADER -->

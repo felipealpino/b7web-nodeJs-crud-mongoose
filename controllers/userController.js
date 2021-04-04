@@ -5,6 +5,27 @@ exports.signin = (req,res) => {
     res.render('signin') 
 }
 
+exports.signinAction = (req, res) => {
+    const {email, password} = req.body
+    if(!email || !password){
+        req.flash('error','preenche tudo ai filho da puta')
+    }
+
+    User.findOne({'email': email}, function (err, dados) {
+        bcrypt.compare(password, dados.password, (error, resposta) => {
+            // resposta == true ou resposta == false
+            if(resposta){
+                req.flash('success', 'PODE PASSAR MIGAO')
+                res.render('home', {dados})
+            } else {
+                req.flash('error', 'Errou a senha Jão ( ͡❛  ͟ʖ ͡❛)')
+                res.redirect('signin')
+            }
+        })
+    })
+
+}
+
 exports.signup = (req, res) =>{
     res.render('signup')
 }
