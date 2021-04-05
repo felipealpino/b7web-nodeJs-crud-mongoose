@@ -8,4 +8,5 @@ module.exports.isLogged = (req, res, next) => {
         req.flash('error', 'Gotta be logged')
         res.redirect('/users/signin')
     }
+next()
 }
